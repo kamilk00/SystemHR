@@ -1,0 +1,42 @@
+﻿<Window x:Class="SystemHR.AddContractWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SystemHR"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        mc:Ignorable="d"
+       Title="System HR" Height="450" Width="800" ResizeMode="NoResize" WindowStyle="None" AllowDrop="False">
+    <Grid Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}">
+        <Grid.OpacityMask>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.OpacityMask>
+        <Grid HorizontalAlignment="Center" Height="388" Margin="0,52,0,0" VerticalAlignment="Top" Width="800">
+            <Grid HorizontalAlignment="Center" Height="426" VerticalAlignment="Top" Width="676" Margin="0,-38,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="320*"/>
+                    <ColumnDefinition Width="357*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name = "addButton" Content="Add" HorizontalAlignment="Left" Height="44" Margin="105,292,0,0" VerticalAlignment="Top" Width="152" Background="#FF09B800" Click="addButton_Click"/>
+                <ComboBox Name = "typeOfContract" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="30" Margin="160,54,0,0" VerticalAlignment="Top" Width="462" FontSize="20">
+                    <ComboBoxItem Name="employmentContract"  Content="employment contract"></ComboBoxItem>
+                    <ComboBoxItem Name="contractOfMandate" Content="contract of mandate"></ComboBoxItem>
+                    <ComboBoxItem Name="B2B" Content="B2B"></ComboBoxItem>
+                </ComboBox>
+                <Label Content="Type of contract" HorizontalAlignment="Left" Height="30" Margin="50,54,0,0" VerticalAlignment="Top" Width="105" RenderTransformOrigin="0.589,0.512"/>
+                <Button x:Name = "cancelButton" Content="Cancel" HorizontalAlignment="Left" Height="44" Margin="74,292,0,0" VerticalAlignment="Top" Width="152" Background="#FFB83C00" Click="cancelButton_Click" Grid.Column="1"/>
+                <Label Content="Name" HorizontalAlignment="Left" Height="30" Margin="50,95,0,0" VerticalAlignment="Top" Width="83"/>
+                <TextBox x:Name = "name" HorizontalAlignment="Left" Height="30" FontSize="20" Margin="160,95,0,0"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="462" Grid.ColumnSpan="2"/>
+                <Label Content="Salary" HorizontalAlignment="Left" Height="30" Margin="50,136,0,0" VerticalAlignment="Top" Width="83"/>
+                <syncfusion:UpDown Name="Salary" Height="30" Margin="160,136,42,267" FontSize="20" FontWeight="Bold" VerticalAlignment="Top"/>
+                <Label Content="Start of Contract" HorizontalAlignment="Left" Height="30" Margin="50,177,0,0" VerticalAlignment="Top" Width="110"/>
+                <TextBox x:Name = "startOfContract" HorizontalAlignment="Left" Height="30" FontSize="20" Margin="160,177,0,0"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="462" Grid.ColumnSpan="2"/>
+                <Label Content="End Of Contract" HorizontalAlignment="Left" Height="30" Margin="50,218,0,0" VerticalAlignment="Top" Width="105"/>
+                <TextBox x:Name = "endOfContract" HorizontalAlignment="Left" Height="30" FontSize="20" Margin="160,218,0,0"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="462" Grid.ColumnSpan="2"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
